@@ -1,0 +1,24 @@
+---
+- job:
+    name: Jenkins-Jobs
+    project-type: pipeline
+    defaults: global
+    description: 'Builds all Jenkins Jobs'
+    retry-count: 3
+    properties:
+      - github:
+          url: https://github.com/mellena1/Jenkins-Jobs
+    pipeline-scm:
+      script-path: Jenkinsfile
+      scm:
+        - git:
+            url: https://github.com/mellena1/Jenkins-Jobs
+            credentials-id: Github
+            branches:
+              - "*/master"
+            wipe-workspace: false
+            included-regions:
+              - "jobs/.*"
+    triggers:
+      - pollscm:
+          cron: "H/5 * * * *"
