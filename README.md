@@ -1,2 +1,4 @@
 # Jenkins-Jobs
-All of my jenkins jobs configs using Jenkins Job Builder
+A way to source control my Jenkins server in a Docker container.
+
+All job configs are stored in a separate private repo.
