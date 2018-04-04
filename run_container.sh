@@ -19,6 +19,7 @@ export DELPHI_SSH_KEY_FILE=$DELPHI_SSH_KEY_FILE
 # AWS ssh key
 read -e -p "Enter location of AWS ssh key file: " AWS_SSH_KEY_FILE
 export AWS_SSH_KEY_FILE=$AWS_SSH_KEY_FILE
+echo ""
 # AWS Access Key
 if [ ! -z $AWS_ACCESS_KEY_ID ]
 then
@@ -26,6 +27,7 @@ then
 else
     read -s -p "Enter AWS_ACCESS_KEY_ID: " AWS_ACCESS
     export AWS_ACCESS=$AWS_ACCESS
+    echo ""
 fi
 # AWS Secret Key
 if [ ! -z $AWS_SECRET_ACCESS_KEY ]
@@ -34,6 +36,7 @@ then
 else
     read -s -p "Enter AWS_SECRET_ACCESS_KEY: " AWS_SECRET
     export AWS_SECRET=$AWS_SECRET
+    echo ""
 fi
 
 # Wait for jenkins to come up
