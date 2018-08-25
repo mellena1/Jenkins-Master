@@ -6,7 +6,7 @@ ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 # Install extra packages
 USER root
 RUN apt-get update && apt-get install -y python python-pip
-RUN pip install jenkins-job-builder==2.0.0.0b2 python-jenkins
+RUN pip install jenkins-job-builder python-jenkins
 
 # Install Docker
 RUN apt-get -qq update \

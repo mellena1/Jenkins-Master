@@ -73,7 +73,7 @@ pip install jenkinsapi > /dev/null
 python python_scripts/make_credentials.py
 # Make job builder job
 echo "Making Job Builder Job..."
-pip install jenkins-job-builder==2.0.0.0b2 > /dev/null
+pip install jenkins-job-builder > /dev/null
 jenkins-jobs --user admin --password $ADMIN_PASSWORD --conf job_builder/jenkins_jobs.conf update job_builder/Job-Builder-Job.yml > /dev/null 2>&1
 # Run that job
 echo "Running the job so all other jobs will be created..."
